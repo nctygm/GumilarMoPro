@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => InitState();
 }
@@ -18,13 +20,13 @@ class InitState extends State<SignUpScreen> {
           children: [
             Container(
                 height: 250,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(90)),
                     gradient: LinearGradient(
                         colors: [
-                          new Color.fromARGB(255, 4, 108, 243),
-                          (new Color.fromARGB(255, 108, 164, 237))
+                          Color.fromARGB(255, 4, 108, 243),
+                          (Color.fromARGB(255, 108, 164, 237))
                         ],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter)),
@@ -34,22 +36,22 @@ class InitState extends State<SignUpScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 20, top: 20),
+                      margin: const EdgeInsets.only(left: 20, top: 20),
                       child: Image.asset('images/logo.png'),
                       height: 90,
                       width: 90,
                     ),
                     Container(
-                        margin: EdgeInsets.only(left: 25, top: 20),
+                        margin: const EdgeInsets.only(left: 25, top: 20),
                         alignment: Alignment.center,
-                        child: Text("Register",
+                        child: const Text("Register",
                             style:
                                 TextStyle(fontSize: 25, color: Colors.white)))
                   ],
                 ))),
             /*Nama*/
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
                 right: 20,
@@ -69,7 +71,7 @@ class InitState extends State<SignUpScreen> {
                 cursorColor: Color.fromARGB(255, 4, 108, 243),
                 decoration: InputDecoration(
                     icon: Icon(
-                      Icons.drive_file_rename_outline,
+                      Icons.account_circle,
                       color: Color.fromARGB(255, 4, 108, 243),
                     ),
                     hintText: "Masukan Nama",
@@ -78,71 +80,9 @@ class InitState extends State<SignUpScreen> {
               ),
             ),
 
-            /*NIK*/
-            Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
-                boxShadow: const [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE))
-                ],
-              ),
-              alignment: Alignment.center,
-              child: const TextField(
-                cursorColor: Color.fromARGB(255, 4, 108, 243),
-                decoration: InputDecoration(
-                    icon: Icon(
-                      Icons.account_circle,
-                      color: Color.fromARGB(255, 4, 108, 243),
-                    ),
-                    hintText: "Masukan NIK",
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none),
-              ),
-            ),
-
-            /*Username*/
-            Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
-                boxShadow: const [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE))
-                ],
-              ),
-              alignment: Alignment.center,
-              child: const TextField(
-                cursorColor: Color.fromARGB(255, 4, 108, 243),
-                decoration: InputDecoration(
-                    icon: Icon(
-                      Icons.account_circle,
-                      color: Color.fromARGB(255, 4, 108, 243),
-                    ),
-                    hintText: "Masukan Username",
-                    enabledBorder: InputBorder.none,
-                    focusedBorder: InputBorder.none),
-              ),
-            ),
-
             /*Email*/
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
                 right: 20,
@@ -171,9 +111,9 @@ class InitState extends State<SignUpScreen> {
               ),
             ),
 
-            /*TElfon*/
+            /*Password*/
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
                 right: 20,
@@ -190,20 +130,22 @@ class InitState extends State<SignUpScreen> {
               ),
               alignment: Alignment.center,
               child: const TextField(
+                obscureText: true,
                 cursorColor: Color.fromARGB(255, 4, 108, 243),
                 decoration: InputDecoration(
                     icon: Icon(
-                      Icons.phone,
+                      Icons.password,
                       color: Color.fromARGB(255, 4, 108, 243),
                     ),
-                    hintText: "Masukan Nomor Telepon",
+                    hintText: "Password",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
               ),
             ),
-            /*Password*/
+
+            /*Konfirmasi Password*/
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: const EdgeInsets.only(
                 left: 20,
                 right: 20,
@@ -219,15 +161,15 @@ class InitState extends State<SignUpScreen> {
                 ],
               ),
               alignment: Alignment.center,
-              child: TextField(
+              child: const TextField(
                 obscureText: true,
                 cursorColor: Color.fromARGB(255, 4, 108, 243),
                 decoration: InputDecoration(
                     icon: Icon(
-                      Icons.vpn_key,
+                      Icons.password,
                       color: Color.fromARGB(255, 4, 108, 243),
                     ),
-                    hintText: "Masukan Password",
+                    hintText: "Konfirmasi Passowrd",
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none),
               ),
@@ -237,26 +179,22 @@ class InitState extends State<SignUpScreen> {
                 /*TULIS KODE ONCLIK NYA DISINI!!!*/
               },
               child: Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 25),
-                padding: EdgeInsets.only(left: 20, right: 20),
+                margin: const EdgeInsets.only(left: 20, right: 20, top: 25),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 alignment: Alignment.center,
                 height: 50,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
                     (new Color.fromARGB(255, 4, 108, 243)),
-                    (new Color.fromARGB(255, 108, 164, 237))
+                    (const Color.fromARGB(255, 108, 164, 237))
                   ], begin: Alignment.centerLeft, end: Alignment.centerRight),
                   borderRadius: BorderRadius.circular(50),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                         offset: Offset(0, 10),
                         blurRadius: 50,
                         color: Color(0xffEEEEEE))
                   ],
-                ),
-                child: Text(
-                  "REGISTER",
-                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ),

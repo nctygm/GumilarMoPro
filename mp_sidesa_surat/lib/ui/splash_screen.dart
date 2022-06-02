@@ -5,7 +5,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:mp_sidesa_surat/login_screen.dart';
+import 'package:mp_sidesa_surat/ui/login_screen.dart';
 
 // ignore: use_key_in_widget_constructors
 class SplashScreen extends StatefulWidget {
@@ -16,7 +16,6 @@ class SplashScreen extends StatefulWidget {
 class InitState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     startTimer();
   }
@@ -26,6 +25,7 @@ class InitState extends State<SplashScreen> {
     return new Timer(duration, LoginRoute);
   }
 
+  // ignore: non_constant_identifier_names
   LoginRoute() {
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => LoginScreen()));
@@ -43,7 +43,7 @@ class InitState extends State<SplashScreen> {
           Container(
             decoration: BoxDecoration(
                 color: Color.fromARGB(255, 4, 108, 243),
-                gradient: LinearGradient(colors: [
+                gradient: LinearGradient(colors: const [
                   (Color.fromARGB(255, 4, 108, 243)),
                   (Color.fromARGB(255, 108, 164, 237))
                 ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),

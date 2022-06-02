@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mp_sidesa_surat/login_screen.dart';
-import 'package:mp_sidesa_surat/splash_screen.dart';
+import 'package:mp_sidesa_surat/ui/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
